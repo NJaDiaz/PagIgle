@@ -157,20 +157,20 @@ document.getElementById('progressSlider').addEventListener('input', function() {
     audio.currentTime = progress * audio.duration; 
 });
 
-muteBtn.addEventListener('click', function() {
-    if (audio.volume > 0) { 
-        previousVolume = audio.volume; 
-        audio.volume = 0; 
+// muteBtn.addEventListener('click', function() {
+//     if (audio.volume > 0) { 
+//         previousVolume = audio.volume; 
+//         audio.volume = 0; 
        
-        document.getElementById('muteIcon').style.display = 'block';
-        document.getElementById('volumeIcon').style.display = 'none';
-    } else { 
-        audio.volume = previousVolume; 
+//         document.getElementById('muteIcon').style.display = 'block';
+//         document.getElementById('volumeIcon').style.display = 'none';
+//     } else { 
+//         audio.volume = previousVolume; 
        
-        document.getElementById('muteIcon').style.display = 'none';
-        document.getElementById('volumeIcon').style.display = 'block';
-    }
-});
+//         document.getElementById('muteIcon').style.display = 'none';
+//         document.getElementById('volumeIcon').style.display = 'block';
+//     }
+// });
 
 
 document.addEventListener('DOMContentLoaded', function() {
