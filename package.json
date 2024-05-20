@@ -7,7 +7,9 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "redeploy": "gh-pages build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.6",
@@ -32,6 +34,7 @@
     "zustand": "^4.5.2"
   },
   "devDependencies": {
-    "astroturf": "^1.2.0"
+    "astroturf": "^1.2.0",
+    "gh-pages": "^6.1.1"
   }
 }
