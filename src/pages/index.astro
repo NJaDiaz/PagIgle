@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro'
+import Somos from '../components/Somos.astro'
+import Vivo from '../components/Vivo.astro'
+import React from 'react';
+import Escucha from '../components/Escucha.astro';
+import Horarios from '../components/Horarios.astro';
+import Templos from '../components/Templos.astro';
+import Sabados from '../components/Sabados.astro';
+
+---
+
+<Layout title="Welcome to Astro.">
+
+	<main>
+
+		<Hero />
+		<Somos />
+		<!-- <MusicPlayer /> -->
+<!-- <Player /> -->
+<!-- <Repro /> -->
+<Horarios />
+<Vivo />
+<Escucha />
+<Sabados />
+<Templos />
+		<slot />
+
+	</main>
+</Layout>
+
+
+<style is:global>
+
+</style>	
+
+
+
+

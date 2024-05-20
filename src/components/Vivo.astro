@@ -1,0 +1,233 @@
+
+<section id="vivo" class=" relative md:h-full md:w-full">
+<div class="" >
+
+
+    <div class="text-center">
+        <h1 class=" text-5xl py-7 md:p-10 font-bold">Transmisión Online</h1>
+        <p class="text text-2xl font-semiboldp-3">Disfruta de nuestras transmisiones en vivo <br>
+             de todas nuestras reuniones</p>
+    </div>
+    <div class="holder py-9 flex inset-0 flex-col md:flex-row items-center md:items-start justify-center md:justify-between">
+    <div class="audio green-audio-player ">
+      
+      <div class="play-pause-btn">  
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">
+          <path fill="#566574" fill-rule="evenodd" d="M18 12L0 24V0" class="play-pause-icon" id="playPause"/>
+        </svg>
+      </div>
+  
+      <div class="controls">
+        <span class="current-time">0:00</span>
+        <div class="slider" data-direction="horizontal">
+          <div class="progress">
+            <div class="pin" id="progress-pin" data-method="rewind"></div>
+          </div>
+        </div>
+        <span class="total-time">0:00</span>
+      </div>
+  
+      <div class="volume">
+        <div class="volume-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="#566574" fill-rule="evenodd" d="M14.667 0v2.747c3.853 1.146 6.666 4.72 6.666 8.946 0 4.227-2.813 7.787-6.666 8.934v2.76C20 22.173 24 17.4 24 11.693 24 5.987 20 1.213 14.667 0zM18 11.693c0-2.36-1.333-4.386-3.333-5.373v10.707c2-.947 3.333-2.987 3.333-5.334zm-18-4v8h5.333L12 22.36V1.027L5.333 7.693H0z" id="speaker"/>
+          </svg>
+        </div>
+        <div class="volume-controls hidden">
+          <div class="slider" data-direction="vertical">
+            <div class="progress">
+              <div class="pin" id="volume-pin" data-method="changeVolume"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <audio src="/media/wos.mp3"></audio>
+      
+    </div>
+
+  <script src="../components/Audio.js"></script>
+</div>
+
+<div class="vivof block mx-auto md:h-full md: w-fit ">
+<h2 class=" text-center font-bold my-6 text-xl"> Tambien miranos a través de facebook todos los domingos</h2>
+<a class=" flex justify-center md:w-fit,flex" href="https://www.facebook.com/Vidaenfesl"><img src="/img/faceb.svg" alt="imagenfacebook"></a>
+</divmx-auto>
+</div>
+</section>
+
+
+<style is:global>
+
+
+#vivo{
+    background-image: url("img/fondo-ori.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+
+
+
+.vivof img {
+  justify-content: center;
+}
+
+.holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.holder .get-it-on-github {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-family: 'Roboto';
+  color: #55606e;
+}
+
+.audio.green-audio-player {
+  width: 100%;
+  max-width: 400px;
+  height: 56px;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, .07);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-radius: 4px;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: #ffffff;
+}
+
+.audio.green-audio-player .play-pause-btn {
+  cursor: pointer;
+}
+
+.audio.green-audio-player .slider {
+  flex-grow: 1;
+  background-color: #838383;
+  cursor: pointer;
+  position: relative;
+}
+
+.audio.green-audio-player .slider .progress {
+  background-color: #44bfa3;
+  border-radius: inherit;
+  position: absolute;
+  pointer-events: none;
+}
+
+.audio.green-audio-player .slider .progress .pin {
+  height: 16px;
+  width: 16px;
+  border-radius: 8px;
+  background-color: #44bfa3;
+  position: absolute;
+  pointer-events: all;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.32);
+}
+
+.audio.green-audio-player .controls {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: #55606e;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.audio.green-audio-player .controls .slider {
+  margin-left: 16px;
+  margin-right: 16px;
+  border-radius: 2px;
+  height: 4px;
+}
+
+.audio.green-audio-player .controls .slider .progress {
+  width: 0;
+  height: 100%;
+}
+
+.audio.green-audio-player .controls .slider .progress .pin {
+  right: -8px;
+  top: -6px;
+}
+
+.audio.green-audio-player .controls span {
+  cursor: default;
+}
+
+.audio.green-audio-player .volume {
+  position: relative;
+}
+
+.audio.green-audio-player .volume .volume-btn {
+  cursor: pointer;
+}
+
+.audio.green-audio-player .volume .volume-btn.open path {
+  fill: #44bfa3;
+}
+
+.audio.green-audio-player .volume .volume-controls {
+  width: 30px;
+  height: 135px;
+  background-color: rgba(0, 0, 0, 0.62);
+  border-radius: 7px;
+  position: absolute;
+  left: -3px;
+  bottom: 52px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.audio.green-audio-player .volume .volume-controls.hidden {
+  display: none;
+}
+
+.audio.green-audio-player .volume .volume-controls .slider {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  width: 6px;
+  border-radius: 3px;
+}
+
+.audio.green-audio-player .volume .volume-controls .slider .progress {
+  bottom: 0;
+  height: 100%;
+  width: 6px;
+}
+
+.audio.green-audio-player .volume .volume-controls .slider .progress .pin {
+  left: -5px;
+  top: -8px;
+}
+
+svg, img {
+  display: block;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(1turn);
+  }
+}
+
+
+</style>
