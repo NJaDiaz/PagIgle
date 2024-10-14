@@ -12,4 +12,14 @@ export default defineConfig({
   },
   site: 'https://NJaDiaz.github.io',
   base: 'https://github.com/NJaDiaz/PagIgle.git',
+  vite: {
+    optimizeDeps: {
+      include: [
+        '@mui/material',
+        '@mui/icons-material',
+        '@emotion/react',
+        '@emotion/styled',
+      ],
+    },
+  },
 });
