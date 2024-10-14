@@ -1,6 +1,8 @@
-<section id="Sabados" class="Sabados">
-<h1 class=" text-center font-semibold text-3xl md:text-5xl py-3 pt-6 uppercase">Sabados Vida</h1>
-<p class="text-center text-xl text-bold pb-3">Disfruta junto a nosotros en las actividades de los sabados</p>
+<section id="Sabados"  class="Sabados md:p-8">
+  <div class="p-7 text-center">
+<h1 class="  font-semibold text-3xl md:text-5xl pt-6 uppercase">Sabados Vida</h1>
+<p class=" text-xl text-bold  my-6">Disfruta junto a nosotros en las actividades de los sabados</p>
+</div>
 <div class="row  flex py-3 h-full">
     <div class="example-1 card">
       <div class="wrapper ">
@@ -9,9 +11,10 @@
           <div class="content content-center">
             <h1 class="title text-white font-bold py-3">Vida Kids</h1>
             <p class="text-white">Todos los sabados a partir de las 10hs <br/> 
-            Niños a partir de los 3 años de edad hasta los 12
-        <br>
-    <br></p>
+            Niños a partir de los 3 años de edad hasta los 12 años. <span class=" inline md:hidden"> ¡No te lo pierdas!</span>
+        <p class="hidden md:inline"> ¡No te lo pierdas!
+
+        </p>
         
           </div>
           
@@ -26,8 +29,8 @@
             <div class="content">
               <h1 class="title text-white font-bold py-3">Jovenes Vida</h1>
               <p class="text-white">Todos los sabados a partir de las 21hs <br/> 
-              A partir de los 18 años de edad. No tenemos limite de edad.
-              <br> ¡Te esperamos! 
+              A partir de los 18 años de edad. No tenemos limite de edad. <span class=" inline md:hidden"> ¡Te esperamos!</span>
+               <p class="hidden md:inline"> ¡Te esperamos! </p>
             </p>
           
             </div>
@@ -44,8 +47,8 @@
             <div class="content">
               <h1 class="title text-white font-bold py-3">Vida Teens</h1>
               <p class="text-white">Todos los sabados a partir de las 18hs <br/> 
-              Si tenes entre 15 y 18 años te esperamos. No te podes perder nuestras tardes teens </p>
-          
+              Si tenes entre 15 y 18 años te esperamos. No te podes perder nuestras tardes teens. </p>
+                <p class="hidden md:inline">Veni a compartir y ser parte.</p>
             </div>
             
           </div>
@@ -59,9 +62,9 @@
           <div class="data">
             <div class="content">
               <h1 class="title text-white font-bold py-3">PowerTeens</h1>
-              <p class="text-white">Todos los sabados a partir de las 15hs <br/> 
-              Si tenes entre 12 y 15 años te esperamos. No te podes perder nuestras tardes teens </p>
-          
+              <p class="text-white">Todos los sabados a partir de las 16hs <br/> 
+              Si tenes entre 12 y 15 años te esperamos. No te podes perder nuestras tardes teens. </p>
+              <p class="hidden md:inline">Te vas a divertir y aprender, te esperamos.</p>
             </div>
             
           </div>
@@ -111,8 +114,8 @@ background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
 }
 
 .row.d-flex .card {
-    flex: 1; /* Todas las tarjetas ocupan el mismo ancho */
-    margin-right: 10px; /* Margen entre tarjetas */
+    flex: 1; 
+    margin-right: 10px; 
 }
 
 .row.d-flex .card:last-child {
@@ -263,13 +266,13 @@ background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
   }
 
   .card {
-    width: 100%; /* Cambia el ancho de las tarjetas al 100% para ocupar todo el ancho de la pantalla */
+    width: 100%; 
     margin-bottom: 20px;
     height: 50%; 
   }
 
   .card .wrapper {
-    min-height:  ; /* Quita la altura mínima de las tarjetas */
+    min-height:  ; 
   }
 }
 

@@ -1,372 +1,45 @@
-
-
-
-<section class="escuchar content-center justify-center text-white font-bold" id="escucha">
-    <h1 class="text-center py-8 md:text-4xl text-2xl uppercase">Escucha nuevamente</h1>
-     <h4 class=" text-xl text-center my-4">No te pierdas de ninguna predica. <br>
-        Volve a escuchar las predicas mas recientes</h4>
-    <div class="audio-player mx-auto">
-        <audio id="audio"></audio>
-    
-    
-        <div class="info">
-            <h2 id="songTitle">titulo</h2> 
-            <h3>
-                <span id="artistName">artist</span> 
-                <span style="color: #ffffff; font-size: 12px;">
-                    <a href="https://drive.google.com/uc?id=1RH4O2iShfo4ELCyzpchSNsdHG_RAkEid" id="songLink" target="_blank"></a>
-                </span>
-            </h3>
-            <p id="timeElapsed">00:00</p> 
-            <div class="slide md:w-full">
-                <input type="range" id="progressSlider" class="progressbar_slider" min="0" max="100" step="0.1" value="0">
-            </div>
-        </div>
-        
-    
-        <div class="controls">
-            <div class="controls_plays">
-                <svg id="prev_btn" viewBox="0 0 24.5 23.6">
-                    <polygon points="0,11.8 13.5,0 13.5,10.7 24.5,0 24.5,23.6 13.5,12.9 13.5,23.6 "/>
-                </svg>
-    
-                <svg  id="plays_btn" viewBox="0 0 24.5 30.9">
-                    <g id="play_btn">
-                        <path d="M0,30.9L0,0l24.5,15.4L0,30.9z"/>
-                    </g>
-                    <g id="pause_btn">
-                        <rect x="0" y="0" width="8.2" height="30.9"/>
-                        <rect x="16.2" y="0" width="8.2" height="30.9"/>
-                    </g>
-                </svg>
-    
-                <svg id="next_btn" viewBox="0 0 24.5 23.6">
-                    <polygon points="25,11.8 11.5,0 11.5,10.7 0.5,0 0.5,23.6 11.5,12.9 11.5,23.6 "/>
-                </svg>
-            </div>
-            <div class="controls_player">
-                <svg id="volume_btn" viewBox="0 0 23 23">
-                    <path d="M17.5,6.6v9.9L11.4,13H5.5v-3h6L17.5,6.6z M10.7,7H2.5v9h8.2l9.8,5.3V1.2L10.7,7z"/>
-                </svg>
-                <input type="range" id="volumeRange" min="0" max="100" value="100" step="1">
-                
-            </div>
-            
-        </div>
-        <div class="hamburger-icon pb-4">
-            <h2 class=" text-sm">Selecciona qué predica escuchar aquí</h2>
-            <img class=" h-10 w-15 pr-5 invert" src="./img/menu.svg" alt="">
-        </div>
-    
-      
-        <div class="song-list-dropdown pointer-events-auto">
-            <ul class=" py-3 text-white" id="songs">
-
-                </li>
-            </ul>
-        </div>
-          <script src="../components/Repro.js"></script>
-          
+<section class="escuchar content-center h-full justify-center text-white font-bold" id="escucha">
+    <div class="p-8 mt-7">
+    <h1 class="text-center md:text-4xl text-2xl uppercase">Escucha nuevamente</h1>
+    <h4 class="text-xl text-center my-4">No te pierdas de ninguna predica. <br>
+        Volvé a escuchar las predicas más recientes</h4>
     </div>
+    <div class="spotify-player my-8">
+        <iframe 
+            style="border-radius:12px" 
+            src="https://open.spotify.com/embed/playlist/6jHAZvvAal29MJJiQUN8nV?utm_source=generator" 
+            width="75%" height="380" 
+            allowfullscreen="" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            loading="lazy">
+        </iframe>
     </div>
-    
-    
 </section>
 
-
-
 <style>
-
- 
- h2 {
-	 font-size: 20px;
-	 font-weight: 700;
-     color: #fff;
-}
- h3 {
-	 font-size: 16px;
-	 font-weight: 400;
-     color: #fff;
-}
- p {
-	 display: inline-block;
-	 font-size: 14px;
-	 font-weight: 400;
-	 margin-bottom: 10px;
-	 color: rgb(255, 255, 255);
-     
-}
-
-li{
-    background-color: #ffffff;
-}
-
 #escucha {
     position: relative;
-    height: 100%;
     width: auto;
     background-color: rgb(55 65 81);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-      background-position: center;
-    
+    background-position: center;
 }
 
-#escucha .audio-player {
-
-    flex-direction: column;
-    justify-content: space-around;
-    transition: all 0.2s;
-    width: 70%;
-    height: 70%;
-    max-width: auto;
-    background-color: rgb(55 65 81);
-    box-sizing: border-box;
-    color:black;
-   
-
-}
-@media screen and (max-width: 560px) {
-    .audio-player {
-        width: auto;
-        background-color: rgb(55 65 81);
-   }
-}
-.info {
-    flex: 1;
-    padding: 16px 30px;
-}
-.cover-art {
-    position: absolute;
-    bottom: 160px;
-    right: -30px;
-    width: 230px;
-    height: 230px;
-    background-size: cover;
-    transition: all 0.2s;
-}
-@media screen and (max-width: 560px) {
-    .cover-art {
-        position: relative;
-        width: 100%;
-        height: 80vw;
-        bottom: inherit;
-        right: inherit;
-   }
+h1, h4 {
+    color: #ffffff;
 }
 
-@media screen and (max-height: 500px) {
-    .cover-art {
-        display: none;
-        width: 0px;
-        height: 0px;
-   }
-   
-}
-.cover-art a {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-.cover-art a:hover {
-    background: #22a952;
-    opacity: 0.2;
-}
-.controls {
+.spotify-player {
     display: flex;
-    width: 100%;
-    height: 100px;
-    margin-top: -1px;
-    padding: 20px;
-    box-sizing: border-box;
-    transition: all 0.2s;
-    background-color: rgb(55 65 81);
-    transform: ;
-}
-.controls_plays {
-    flex: 2;
-    display: flex;
-    justify-content: space-around;
-   
-}
-.controls_player {
-    flex: 1;
-    fill: #ffffff;
-    display: flex;
-    justify-content: space-around;
-}
-@media screen and (max-width: 420px) {
-    .controls {
-        flex-direction: column;
-        height: 100%;
-   }
-   .audio-player {
-height:auto;
-   }
-
-}
-#plays_btn, #prev_btn, #next_btn {
-    cursor: pointer;
-    transition: all 0.2s;
-    padding:10px;
-    filter: invert(1);
-    height: auto;
-    width: 50px;
-}
-#plays_btn:hover, #prev_btn:hover, #next_btn:hover {
-    fill: #4e94ac;
-    filter: none;
-}
-#pause_btn {
-    display: none;
-}
-#volume_btn, #shuffle_btn, #playlist_btn {
-    cursor: pointer;
-    width: 23px;
-    max-width: 18px;
-    transition: all 0.2s;
-}
-#volume_btn:hover, #shuffle_btn:hover, #playlist_btn:hover {
-    fill: #7bb8ca;
-}
- .progressbar_slide {
-    width: 100%;
-    background: #5b7263;
-    height: 6px;
-}
-.progressbar_slider::-webkit-slider-runnable-track {
-    width: 100%;
-    background: black;
-    height: 6px;
+    justify-content: center;
+    align-items: center;    
+    padding: 20px 0;
 }
 
-
-
-
-
-input[type="range"] {
-   -webkit-appearance: none;
-   appearance: none;
-   background: transparent;
-   cursor: pointer;
-   width: 70%;
- }
- 
- 
- input[type="range"]:focus {
-   outline: none;
- }
- 
- /******** Chrome, Safari, Opera and Edge Chromium styles ********/
- 
- input[type="range"]::-webkit-slider-runnable-track {
-    background-color: #e6e7e7;
-   border-radius: 0.5rem;
-   height: 0.5rem;
- }
- 
- 
- input[type="range"]::-webkit-slider-thumb {
-   -webkit-appearance: none; 
-   appearance: none;
-   margin-top: -4px; 
-   background-color: #4b87b9;
-   border-radius: 0.5rem;
-   height: 1rem;
-   width: 1rem;
- }
- 
- input[type="range"]:focus::-webkit-slider-thumb {
-   outline: 3px solid #a6c8d3;
-   outline-offset: 0.125rem;
- }
- 
-
- input[type="range"]::-moz-range-track {
-    background-color: rgb(218, 85, 85);
-   border-radius: 0.5rem;
-   height: 0.5rem;
- }
- 
-
- 
- input[type="range"]:focus::-moz-range-thumb{
-   outline: 3px solid #ffffff;
-   outline-offset: 0.125rem;
- }
-
- #controls_player{
-   cursor:pointer;
- }
-
-
-.hamburger-icon {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: center;
-   cursor: pointer;
-   text-align: center;
+iframe {
+    border-radius: 12px;
+    border: none;
 }
-
-.hamburger-icon:hover{
-    background-color: #4e94ac;
-    color: rgb(255, 255, 255);
-    transition: 0.5s;
-}
-
-.hamburger-icon i {
-   width: 20%;
-}
-
-.hamburger-icon h2 {
-   margin: 10px;
-   flex-grow: 1;
-   text-align: center;
-}
-
-
-.song-list-dropdown {
-   display: fixed;
-   text-align: center;
-   top: 100%;
-   left: 0;
-   width: 100%;
-   height: auto; 
-   max-height: calc(100vh - 100px); 
-   overflow-y: auto;
-   background-color: rgb(55 65 81);
-   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-   z-index: 1;
-   padding: 10px;
-   box-sizing: border-box; 
-   
-}
-
-.song-list-dropdown h2 {
-   margin: 0; 
-   padding: 10px; 
-   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(21,175,157,1) 0%, rgba(0,212,255,1) 100%);
-   text-align: center; 
-}
-
-
-.song-list-dropdown ul{
-    font-weight: bold;
-}
-
-.song-item:hover {
-    background-color: #65dbcb; 
-}
-
-.song-item {
-    background-color: #22a952; 
-    padding: 10px; 
-    margin-bottom: 5px; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    transition: background-color 0.3s ease; 
-}
-
 </style>
