@@ -10,8 +10,6 @@ export default defineConfig({
   build: {
     outDir: 'dist',
   },
-  site: 'https://NJaDiaz.github.io',
-  base: 'https://github.com/NJaDiaz/PagIgle.git',
   vite: {
     optimizeDeps: {
       include: [
